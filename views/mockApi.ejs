@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <title>Mock API</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Mock API</h1>
+
+      <% if (error) { %>
+        <p><%error %></p>
+      <% } else if (data) { %>
+        <% data.forEach(user => { %>
+          <p>User name: <%= user.name %></p>
+          <p>Adress: <%= user.adress %></p>
+          <p>Number: <%= user.number %></p>
+          <br>
+        <% }); %>
+      <% } %>
+    </div>
+  </body>
+</html>

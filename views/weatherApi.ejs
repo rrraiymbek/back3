@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <title>Weather</title>
+  </head>
+  <body>
+    <h1>Weather</h1>
+    <form action="/weather" method="get">
+      <input type="text" name="city" placeholder="Сity name"/>
+      <button type="submit" class="btn">Get Weather</button>
+    </form>
+    <% if (error) { %>
+    <p class="error"><%= error %></p>
+    <% } else if (weather) { %>
+        <p>
+          <%= weather.main.temp %>&deg;F
+        </p>
+        <p>
+          <%= weather.weather[0].main %>
+        </p>
+        <p>
+          <%= weather.name %>, <%= weather.sys.country %> <%= weather.timezone
+          %>,
+        </p>
+          wind speed: <%= weather.wind.speed %>
+        </p>
+        <p>
+          </i> Rain Volume: <%= weather.rain ?
+          weather.rain['1h'] : 'undefined' %>
+        </p>
+    <% } %>
+  </body>
+</html>

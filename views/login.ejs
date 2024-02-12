@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <title>Login page</title>
+</head>
+  <body>
+    <div style="display: flex; align-items: center; gap: 40px;">
+      <h1>Login Page</h1>
+      <a href="/register">Not registered yet?</a>
+    </div>
+    <form method="POST" action="/login">
+      <label for="username">Name:</label>
+      <input type="text" name="username" required />
+      <br />
+      <label for="password">Password:</label>
+      <input type="password" name="password" required />
+      <br />
+      <button type="submit">Sign in</button>
+    </form>
+  </body>
+</html>

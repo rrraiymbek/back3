@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+    <title>Currency App using NodeJS</title>
+  </head>
+
+  <body>
+    <h1>Currency</h1>
+    <form action="/currency" method="get">
+      <input type="text" name="money" placeholder="Enter money name" />
+      <input type="text" name="amount" placeholder="Enter amount" />
+      <button type="submit" class="btn">Get Currency</button>
+    </form>
+    <% if (error) { %>
+    <p class="error"><%= error %></p>
+    <% } %> <% if (data) { %>
+    <p>Base: <%= data.base %></p>
+    <p>Amount: <%= data.amount %></p>
+    <p>Result:<%= JSON.stringify(data.result)%></p>
+    <p>Rate: <%= data.result.rate %></p>
+    <% } %>
+  </body>
+</html>
